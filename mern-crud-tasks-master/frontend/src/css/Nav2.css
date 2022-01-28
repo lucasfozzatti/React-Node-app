@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.main-nav2 {
+    max-width: 1000px;
+    
+    margin: 0 auto;
+    padding: 60px 0 ;
+    
+    display: flex;
+    justify-content: center;
+   
+}
+
+.nav, ol {
+    list-style:none;
+}
+.nav{
+    text-align: center;
+    border-top: 2px solid black;
+}
+
+.nav > .li-principal-nav {
+    float:left;
+    
+}
+
+.nav .li-principal-nav .a-principal-nav {
+    
+    padding: 18px;
+    margin-left:10px;
+    margin-right: 10px;
+    font-family: "Open Sans";
+    text-transform:uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    text-decoration: none;
+    display:block;
+}
+
+.nav .li-principal-nav .a-principal-nav:hover {
+    box-shadow: 0 0 10px rgba(255, 9, 9, 0.1), inset 4 4 1px rgba(255, 255, 255, 0.6);
+    background: rgba(209, 175, 112, 0.1);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.nav .li-principal-nav .ul-sub {
+    
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav .li-principal-nav:hover > .ul-sub {
+    display:block;
+}
+
+.nav .li-principal-nav .ul-sub .li-sub {
+    position:relative;
+    
+}
+
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+    margin:0px;
+    padding:0px;
+}
+
+
+nav {
+  max-width: 960px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  padding: 60px 0;
+  
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(7, 4, 4, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+nav ul ol{
+    list-style:none;  
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform:uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(255, 9, 9, 0.1), inset 4 4 1px rgba(255, 255, 255, 0.6);
+  background: rgba(209, 175, 112, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+ul li ul{
+    display:none;
+    position:absolute;
+    min-width: 140px;
+}
+nav ul li:hover ul{
+    display: block; 
+}
+nav ul li ul li ul{
+    right:-140px;
+	top:0px;
+} */
+
+
+

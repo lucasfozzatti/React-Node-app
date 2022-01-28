@@ -1,0 +1,35 @@
+.container-description{
+    
+    display: flex;
+   justify-content: center;
+   margin-left:10%;
+   margin-right:10%;
+
+}
+.subcontainer-description{
+   
+    text-align: center;
+}
+.text-description{
+    margin-top:40px;
+    
+}
+ 
+  
+.amazon-container a img{
+    
+    width: 250px;
+    height: 300px;
+    
+
+}
+.img-description{
+
+    margin-top: 50px;
+
+}
+.amazon{
+    width: 40px;
+    height: 60px;
+    background-color: aquamarine;
+}

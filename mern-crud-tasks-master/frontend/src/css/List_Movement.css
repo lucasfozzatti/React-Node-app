@@ -1,0 +1,13 @@
+.box-movement{
+    margin: auto;
+    max-width: 1000px;  
+}
+
+.list-movement{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin:6px; 
+}  
