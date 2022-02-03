@@ -1,7 +1,7 @@
 
 const pool = require('../database')
 
-
+//Chequeo el id_user y envio todos sus datos 
 exports.movement = async (req, res)=>{
     const id_user = req.params.id
     pool.query(
@@ -11,7 +11,9 @@ exports.movement = async (req, res)=>{
             if (err){
                 console.log("error")
             }else{
-                console.log(result[0].type)
+                console.log("holaaa")
+                
+                res.json({result: result[0].type});
             }
 
         })        

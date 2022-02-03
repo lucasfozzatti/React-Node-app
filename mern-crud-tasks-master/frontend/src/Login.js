@@ -6,6 +6,8 @@ import './css/User_log.css'
 import swal from 'sweetalert';
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import {useUsuario} from './context/usuario-context';
+
 
 const notexist =()=>{
   swal({
@@ -21,14 +23,13 @@ const empty =()=>{
   })}
 
 export default function Login() {
+    const {username,password, id, setUsername, setPassword, setid} = useUsuario();  
     let history = useHistory();
     console.log("Login")
-    
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    // const [id, setid] = useState(0);
-    const [loginStatus, setLoginStatus] = useState(false);
-    
+      
+
+      // const [id, setid] = useState(0);
+      
     const login = async(e) => {
         e.preventDefault()
         
@@ -42,20 +43,22 @@ export default function Login() {
 
         }).then((response) => {
           if (!response.data.auth) {
-            setLoginStatus(false);
+            
             notexist()
           } else {
             localStorage.setItem("token", response.data.token)
-            setLoginStatus(true);
-            Axios.get("transactions/40").then(()=>{
-             
+            
+            Axios.get("transactions/"+ response.data.result).then(()=>{
+              setid(response.data.result)
+              console.log(response.data.result)
             })
-            history.push("/transactions/"+ 40)
-             
+            history.push("/transactions/"+ id)
+            
+              
           }
         });
     }};
-    
+  
    
     return (
       <React.Fragment>

@@ -9,18 +9,19 @@ import Movement from './Movement';
 import './css/List_Movement.css';
 import Menu from './Menu';
 
-// const userAuthenticated = () =>{
-  
-//   Axios.get('isUserAuth',{
-//     headers: {
-//       "Authorization" : localStorage.getItem('token')
-//     }
 
-//   }).then((response)=>{
+const userAuthenticated = () =>{
+  
+  Axios.get('isUserAuth',{
+    headers: {
+      "Authorization" : localStorage.getItem('token')
+    }
+
+  }).then((response)=>{
      
-//    console.log("hola",response.data);
-//  })
-// }
+   console.log("hola",response.data);
+ })
+}
 
 
   
@@ -48,17 +49,18 @@ function Budget(props){
       role: "Backend Developer",
     }])
     const [id, setid] = useState(0)
-  // let history = useHistory();
-
+  let history = useHistory();
+ 
   // useEffect(() => {
   //   userAuthenticated()
   
   // },[]);
+    
+  const Logout = () =>{
+    localStorage.removeItem('token')
+    history.push("/register")
 
-  // const Logout = () =>{
-  //   localStorage.removeItem('token')
-  //   history.push("/register")
-  // }
+  }
     
     
     return(

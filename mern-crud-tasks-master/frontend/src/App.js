@@ -6,23 +6,14 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Footer from './footer';
 import Log from './User_log'
 import Budget from './transactions';
+import {UsuarioProvider} from './context/usuario-context';
 
 
-
-
-class App extends React.Component{
-  constructor(props){
-    super(props);
-
-    this.state = {
-        title: '',
-    }
-
-}
+export default function App(){
   
-  render(){
+  
     return (
-
+      <UsuarioProvider>
       <div>
         
         <Router >
@@ -32,15 +23,15 @@ class App extends React.Component{
             {/* <Route path="/:subpage" exact render={({ match }) => {return <Secondary  params={match.params.subpage}/>}}/> */}
             <Route path="/nav" exact component={Menu} />
             <Route path="/register" exact component={Log}/>
-            <Route path="/transactions/:40" exact component={Budget}/>
+            <Route path="/transactions/:id" exact component={Budget}/>
 
             </Switch>
             <Footer/>
         </Router>
         </div>
-        
+        </UsuarioProvider>
     )
-  }
+  
 }
 
-export default App;
+

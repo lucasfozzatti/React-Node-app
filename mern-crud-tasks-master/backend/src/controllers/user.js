@@ -34,13 +34,13 @@ exports.login = async (req, res) => {
             if(response){
                 const id = result[0].id
                 const token = jwt.sign({id}, process.env.JWT_SECRETO, {
-                    expiresIn: 300
+                    expiresIn: 20
                     })
                 //generamos el token SIN fecha de expiracion
                 //const token = jwt.sign({id: id}, process.env.JWT_SECRETO)
                 console.log("TOKEN: "+token+" para el USUARIO : "+ username)
                    
-                res.json({auth: true, token: token, result: result});
+                res.json({auth: true, token: token, result: result[0].id});
                 
                 
             }else{
